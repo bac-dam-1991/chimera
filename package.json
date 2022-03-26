@@ -1,15 +1,19 @@
 {
-	"name": "components",
-	"version": "1.0.0",
+	"name": "@bac-dam-1991/chimera",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/bac-dam-1991"
+	},
+	"version": "1.0.5",
 	"description": "Component library by BTD Tech Pty Ltd",
 	"main": "dist/cjs/index.js",
-	"module": "dist/esm/index.js",
 	"files": [
 		"dist"
 	],
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"rollup": "rollup -c"
+		"build": "rollup -c",
+		"predeploy": "npm run build",
+		"deploy": "npm publish"
 	},
 	"keywords": [],
 	"author": "BTD Tech Pty Ltd",
@@ -26,8 +30,11 @@
 		"typescript": "^4.6.3"
 	},
 	"peerDependencies": {
-		"@emotion/styled": "^11.7.1",
 		"@emotion/react": "^11.7.1",
+		"@emotion/styled": "^11.7.1",
 		"@mui/material": "^5.5.2"
+	},
+	"dependencies": {
+		"@mui/lab": "^5.0.0-alpha.74"
 	}
 }
